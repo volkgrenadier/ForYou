@@ -302,9 +302,11 @@
 		var xueren=document.getElementById("xueren");
 		var tongling2=document.getElementById("tongling2");
 		tongling2.flag=true;
+
 		var maozi=document.getElementById("maozi");
 		var wish=document.getElementById("wish");
 		var lqzf=document.getElementById("lqzf");
+		lqzf.flag=true;
 
 		setTimeout(function(){animate(tongling1,{opacity:80},);}, 1000);
 
@@ -333,7 +335,7 @@
 		}
 		var div1=document.getElementById("div1");
 		lqzf.onclick=function (){
-			if(isMoving||tongling2.flag){
+			if(isMoving||lqzf){
 				return;
 			}
 			isMoving=true;
@@ -341,6 +343,7 @@
 			setTimeout(function(){animate(wishfy,{opacity:80},);}, 2000);
 			setTimeout(function(){animate(div1,{opacity:80},);}, 3500);
 			animate(lqzf,{opacity:0},);
+			lqzf.flag=false;
 			isMoving=false;
 		}
 
