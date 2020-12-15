@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#waibu {
+			width: 100%;
+			height: 760px;
+			position: relative;
+			background-image: url('./img/3.jpeg');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+		}
+		#div1 {
+			width: 150px;
+			height:150px; 
+			margin: 100px auto;
+			position: absolute;
+			top: 6%;
+			left: 29%;
+			z-index: 0.9;
+			opacity: 0;
+		}
+		#div2{
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			background-color: red;
+			overflow: hidden;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		#div3{
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			background-color: red;
+			overflow: hidden;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+		#div4 {
+			width: 90px;
+			height: 90px;
+			background-color: red;
+			transform: translate(30px, 30px) rotate(45deg);
+
+		}
+		
+		
+		#first {
+			width: 100%;
+			height: 110%;
+			
+			position:absolute;
+			top: 0;
+			left: 0;
+			background-position: center center;
+			z-index: 90;
+			
+		}
+		#img1 {
+			width: 100%;
+			height: 110%;
+			filter: blur(4px);
+		}
+		#first1 {
+			width: 200px;
+			height: 450px;
+			position:absolute;
+			top: 25%;
+			left: 45%;
+
+
+
+			
+		}
+		#inpin {
+			position: absolute;
+			top: 47%;
+			left: 0%;
+			height: 22px;
+			text-align: center center;
+			background-color: rgba(193,193,193, 0.5);
+			outline: none;
+			border: 3px solid rgba(193,193,193, 0.8);
+		}
+		#but1 {
+			position: absolute;
+			top: 47%;
+			left: 82%;
+			height: 30px;
+			text-align: center center;
+			background-color: rgba(193,193,193, 0.5);
+			border: 3px solid rgba(193,193,193, 0.8);
+			color: rgba(255, 255, 255, 0.7);
+			outline: none;
+			font-family: '黑体';
+		}
+		#headimg {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			overflow: hidden;
+			background-repeat:  no-repeat;
+			position: absolute;
+			left: 10%;
+		}
+		#img2 {
+			width: 150px;
+			height: 150px;
+		}
+		#username {
+			width: 100px;
+			height: 25px;
+			color: rgba(255, 255, 255, 1);
+			text-align: center;
+			font-size: 25px;
+			font-family: '黑体';
+			position: absolute;
+			top: 30%;
+			left: 18%;
+
+		}
+		#pin{
+			color: rgba(255, 255, 255, 1);
+			text-align: center;
+			font-size: 12px;
+			font-family: '黑体';
+			position: absolute;
+			top:40%;
+			left: 28%;
+
+		}
+		#renmao{
+			width: 500px;
+			height: 700px;
+
+			margin: 0 auto;
+			position: relative;
+		}
+		#xueren {
+			position: absolute;
+			top: 200px;
+			opacity: 0;
+			
+		}
+		#maozi{
+			position: absolute;
+			top: 75px;
+			left: 190px;
+			opacity: 0;
+		}
+		#tongling1 {
+			width: 80px;
+			height: 80px;
+			background-color: #ccc;
+			opacity: 0;
+			border: 1px solid #ccc;
+			border-radius: 50%;
+			position: absolute;
+			left: 48%;
+			top: 10%;
+			outline: none;
+
+		}
+		#tongling2 {
+			width: 90px;
+			height: 90px;
+			background-color: #ccc;
+			border: 1px solid #ccc;
+			border-radius: 50%;
+			position: absolute;
+			left: 67%;
+			top: 35%;
+			outline: none;
+			opacity: 0;
+
+		}
+		#wish {
+			width: 200px;
+			height: 130px;
+			padding: 10px;
+			line-height: 23px;
+			background-color: #cfffff;
+			
+			border: 1px solid #cfffff;
+			border-radius: 15%;
+			position: absolute;
+			left: 24%;
+			top: 18%;
+			outline: none;
+			opacity: 0;
+
+		}
+		#lqzf {
+			width: 90px;
+			height: 90px;
+			background-color: rgb(177,71,29);
+			border: 1px solid rgb(177,71,29);
+			border-radius: 50%;
+			position: absolute;
+			left: 60%;
+			top: 20%;
+			outline: none;
+			opacity: 0;
+			font-size: 18px;
+			color: white;
+		}
+		#wishfy{
+			width: 200px;
+			height: 250px;
+			padding: 10px;
+			line-height: 23px;
+			background-color: rgb(94,73,46);
+			
+			border: 1px solid rgb(94,73,46);
+			border-radius: 15%;
+			position: absolute;
+			left: 27%;
+			top: 5%;
+			outline: none;
+			opacity: 0;/*0*/
+			color: rgb(218,163,65);
+			font-weight: bold;
+		}
+		#bgbutp{
+			width: 50px;
+			height: 50px;
+			background-color: #ccc;
+			border: 1px solid #ccc;
+			border-radius: 50%;
+			position: absolute;
+			right: 10%;
+			top: 1%;
+			outline: none;
+			opacity: 0.8;
+		}
+		#bgbuts{
+			width: 50px;
+			height: 50px;
+			background-color: #ccc;
+			border: 1px solid #ccc;
+			border-radius: 50%;
+			position: absolute;
+			right: 3%;
+			top: 1%;
+			outline: none;
+			opacity: 0.8;
+		}
+	</style>
+	<script src="js/animate.js"></script>
+</head>
+<body>
+	<div id="waibu">
+		<div id="first"><img src="img/a.jpg" id="img1"><div id="first1"><div id="headimg"><img src="img/b.jpg" id="img2"></div><p id="username">FF</p><p id="pin">请提供PIN</p><input type="password" name="" id="inpin"><button id="but1" onclick="hide()">→</button></div></div>
+		<div id="renmao"><div id="xueren"><img src="img/a4.png" id="a4"></div><div id="maozi"><img src="img/a3.png" id="a3"></div></div>
+		<button id="tongling1">点击召唤雪人</button>
+		<button id="tongling2">点击帮雪人带上圣诞帽</button>
+		<div id="wish">&nbsp&nbsp&nbsp&nbsp&nbsp小雪人希望你帮他带上一顶圣诞帽，作为回报，他会给你一份圣诞祝福，你愿意帮他实现吗？</div>
+		<button id="lqzf">领取祝福</button>
+		<div id="wishfy">圣诞快乐！<br>&nbsp&nbsp&nbsp&nbsp&nbsp和小雪人一起吃巧克力吧！</div>
+		<audio id="bgmusic" src="music/1.mp3" autoplay preload loop="loop"></audio>
+		<button id="bgbutp">播放音乐</button>
+		<button id="bgbuts">暂停音乐</button>
+		<div id="div1">
+			<div id="div2"></div>
+			<div id="div3"></div>
+			<div id="div4"></div>
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript">
+		var isMoving=false;
+		var inpin=document.getElementById("inpin");
+		inpin.focus();
+		var bgbutp=document.getElementById("bgbutp");
+		var bgbuts=document.getElementById("bgbuts");
+		var bgmusic=document.getElementById("bgmusic");
+		bgbutp.onclick=function (){
+			bgmusic.play();
+		}
+		bgbuts.onclick=function (){
+			bgmusic.pause();
+		}
+		function hide(){
+			var a=document.getElementById("first");
+			var b=document.getElementById("inpin");
+			if(b.value=="kekeaiai")
+			{
+				a.setAttribute("style", "display:none");
+				alert("请注意电脑音量！建议调整至30%左右呦");
+			}
+		}
+		var tongling1=document.getElementById("tongling1");
+		var xueren=document.getElementById("xueren");
+		var tongling2=document.getElementById("tongling2");
+		tongling2.flag=true;
+		var maozi=document.getElementById("maozi");
+		var wish=document.getElementById("wish");
+		var lqzf=document.getElementById("lqzf");
+
+		setTimeout(function(){animate(tongling1,{opacity:80},);}, 1000);
+
+		tongling1.onclick=function (){
+			if(isMoving){
+				return;
+			}
+			isMoving=true;
+			animate(xueren,{opacity:100},);
+			tongling1.style.display="none";
+			setTimeout(function(){animate(wish,{opacity:70},);}, 2500);//2500
+			setTimeout(function(){animate(tongling2,{opacity:80},);}, 6000);//6000
+			tongling2.flag=false;
+			isMoving=false;
+		}
+		tongling2.onclick=function (){
+			if(isMoving||tongling2.flag){
+				return;
+			}
+			isMoving=true;
+			animate(maozi,{opacity:100},);
+			animate(tongling2,{opacity:0},);
+			animate(wish,{opacity:0},);
+			setTimeout(function(){animate(lqzf,{opacity:100},);}, 2000);
+			isMoving=false;
+		}
+		var div1=document.getElementById("div1");
+		lqzf.onclick=function (){
+			if(isMoving||tongling2.flag){
+				return;
+			}
+			isMoving=true;
+			
+			setTimeout(function(){animate(wishfy,{opacity:80},);}, 2000);
+			setTimeout(function(){animate(div1,{opacity:80},);}, 3500);
+			animate(lqzf,{opacity:0},);
+			isMoving=false;
+		}
+
+	</script>
+</body>
+</html>
