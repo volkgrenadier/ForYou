@@ -321,6 +321,7 @@
 			setTimeout(function(){animate(tongling2,{opacity:80},);}, 6000);//6000
 			tongling2.flag=false;
 			isMoving=false;
+			lqzf.flag=false;
 		}
 		tongling2.onclick=function (){
 			if(isMoving||tongling2.flag){
@@ -335,7 +336,8 @@
 		}
 		var div1=document.getElementById("div1");
 		lqzf.onclick=function (){
-			if(isMoving||lqzf){
+			if(isMoving||lqzf.flag){
+				console.log("执行了该分支");
 				return;
 			}
 			isMoving=true;
