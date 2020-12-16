@@ -318,10 +318,14 @@
 			animate(xueren,{opacity:100},);
 			tongling1.style.display="none";
 			setTimeout(function(){animate(wish,{opacity:70},);}, 2500);//2500
-			setTimeout(function(){animate(tongling2,{opacity:80},);}, 6000);//6000
-			tongling2.flag=false;
-			isMoving=false;
-			lqzf.flag=false;
+			setTimeout(function(){animate(tongling2,{opacity:80},function(){
+				tongling2.flag=false;
+				isMoving=false;
+				lqzf.flag=false;
+			});}, 6000);//6000
+			
+			
+			
 		}
 		tongling2.onclick=function (){
 			if(isMoving||tongling2.flag){
@@ -331,8 +335,8 @@
 			animate(maozi,{opacity:100},);
 			animate(tongling2,{opacity:0},);
 			animate(wish,{opacity:0},);
-			setTimeout(function(){animate(lqzf,{opacity:100},);}, 2000);
-			isMoving=false;
+			setTimeout(function(){animate(lqzf,{opacity:100},function(){isMoving=false;});}, 2000);
+			
 		}
 		var div1=document.getElementById("div1");
 		lqzf.onclick=function (){
